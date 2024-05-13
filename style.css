@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+
+  --background-linear-gradient: linear-gradient(to right, #190361, #BB00FF);
+  --background-card: #fff;
+  --tittle: #34355B;
+  --button: #FF9500;
+
+  font-size: 62.5%;
+}
+
+html,
+body,
+input,
+select,
+textarea {
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+body {
+
+  font-size: 1.6rem;
+  background: var(--background-linear-gradient);
+
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  background: var(--background-card);
+
+  max-width: 41.8rem;
+  border-radius: 0.5rem;
+
+  padding: 6.4rem 4.8rem;
+
+  text-align: center;
+
+  color: var(--tittle);
+
+}
+
+
+h1{
+  font-size: 2.4rem;
+  font-weight: bold;
+
+  margin-bottom: 1.4rem ;
+}
+p{
+  margin-bottom: 2rem;
+}
+
+#fortune-cookie, #opened-cookie{
+  max-width: 30rem;
+  object-fit: cover;
+}
+
+#fortune-cookie{
+  cursor: pointer;
+}
+
+
+.hide{
+  display: none;
+}
+
+.card-fortune{
+  margin: 1.7rem 0;
+  padding: 1rem;
+
+  font-family: "Dancing Script", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+
+  background: #E4EDF1;
+
+  box-shadow: 2px 2px 5px;
+
+  animation: fadeInUp 1.5s;
+
+}
+
+#opened-cookie{
+  padding: 4.2rem 0;
+}
+
+
+#btn-again{
+  margin-top: 1.7rem;
+  color: white;
+
+  padding: 1.6rem;
+  background: var(--button);
+
+  border: none;
+  border-radius: 0.4rem;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+#btn-again:hover{
+  background: #ff9500de;
+}
+
+#fortune-cookie:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  animation: 1.5s fadeInUp;
+}
